@@ -1740,34 +1740,8 @@ document.querySelectorAll('.btn-cta').forEach(btn => {
   });
 });
 
-// ── 9. ELITE – live social proof + scarcity ───────────────
-(function() {
-  const memberEl = document.getElementById('member-count');
-  const slotsEl  = document.getElementById('slots-left');
-  const scarcity = document.querySelector('.scarcity');
-
-  if (memberEl) {
-    let base = 247;
-    setInterval(() => {
-      base = Math.max(230, Math.min(270, base + (Math.floor(Math.random()*3)-1)));
-      memberEl.textContent = base;
-    }, 3600);
-  }
-
-  if (slotsEl && scarcity) {
-    let s = parseInt(slotsEl.textContent, 10);
-    setInterval(() => {
-      if (s > 1) {
-        s--;
-        slotsEl.classList.add('num-drop');
-        slotsEl.textContent = s;
-        setTimeout(() => slotsEl.classList.remove('num-drop'), 400);
-        scarcity.classList.add('shake');
-        setTimeout(() => scarcity.classList.remove('shake'), 500);
-      }
-    }, 26000);
-  }
-})();
+// ── 9. ELITE – effects (elements removed, stub kept) ──────
+(function() {})();
 
 // ── 10. MODAL ─────────────────────────────────────────────
 const PLANS = {
