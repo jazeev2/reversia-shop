@@ -1226,7 +1226,7 @@
 </div>
 
 <!-- ── AUDIO ────────────────────────────────────────────────── -->
-<audio id="bg-audio" loop preload="auto">
+<audio id="bg-audio" loop preload="none">
   <source src="assets/audio/bg.mp3" type="audio/mpeg">
 </audio>
 
@@ -1576,7 +1576,8 @@
 })();
 
 // ── 1. LOADER → main reveal ───────────────────────────────
-window.addEventListener('load', () => {
+// Use DOMContentLoaded so media files don't block the loader
+document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
     document.getElementById('loader').classList.add('hidden');
     const main = document.getElementById('main');
